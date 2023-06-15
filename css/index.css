@@ -19,7 +19,7 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-image: url("/public/images/moon.jpg");
+    background-image: url("public/images/moon.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
