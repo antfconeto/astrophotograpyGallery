@@ -1,0 +1,293 @@
+:root{
+    --color_default_1:#651d99;
+    --color_default_2:#400f76;
+    --color_default_3:#531688;
+    --color_dark: #1b0053;
+    --color_font: #fff;
+    --font_default: 'poppins'
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/public/images/moon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-position 0.5s ease-in-out;
+}
+
+/*Styling the header menu and content*/
+header{
+    position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5%;
+    width: 70%;
+    height: 10%;
+    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: solid 1px rgba(255, 255, 255, 0.04);
+    border-radius: 30px;
+    transition: .4s;
+    
+}
+header .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+
+    
+}
+header .container .logo{
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    position: relative;
+    align-items:center;
+}
+header .container .logo .moonIcon{
+    cursor: pointer;
+    transition: .2s;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+header .container .logo h2{
+    color: var(--color_font);
+    font-family: var(--font_default);
+    transition: .4s;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+header .container .logo p{
+    color: var(--color_font);
+    font-family: var(--font_default);
+    white-space: nowrap;
+}
+
+header .container .socials{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    position: relative;
+    align-items:center;
+}
+
+header .container .socials p {
+    color:var(--color_font);
+    font-family: var(--font_default);
+    font-size: 12px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+header .container .socials .insta{
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+/*Hover header*/
+header:hover{
+    width: 95%;
+}
+
+ .container .logo h2:hover{
+    color:var(#979797);
+    cursor: pointer;
+    
+    text-shadow: 0px 0px 14px #ccc;
+}
+header .container .socials .insta:hover{
+    filter:drop-shadow(0 0 5px #ccc)
+}
+header .container .logo .moonIcon:hover{
+    filter:drop-shadow(0 0 5px #ccc)
+}
+/*
+content
+*/
+.main{
+    max-width: 90%;
+    position: relative;
+    top:150px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.main .viewCards{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.main .viewCards .card{
+    transition: .4s;
+    width: 300px;
+    height: 400px;
+    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    
+}
+
+.main .viewCards .card .cardTitle{
+    color: var(--color_font);
+    font-family: var(--font_default);
+    text-align: center;
+}
+.main .viewCards .card img{
+    position: relative;
+    top: 20px;
+    width: 90%;
+    height: 90%;
+    border-radius: 40px;
+}
+.main .viewCards .card:hover{
+    width: 350px;
+    height: 450px;
+}
+
+.main .viewCards .card .cardBody{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .viewCards .card .cardBody .text{
+    width: 300px;
+    height: 300px;
+    color:var(--color_font);
+    font-family: var(--font_default);
+    font-size: 13px;
+    white-space: inherit;
+}
+.main .galleryContent{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+.main .galleryContent .titleGallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main .galleryContent h1{
+    font-family: 'Poppins';
+    color: var(--color_font);
+}
+.main .galleryContent hr{
+    width: 100%;
+    border: 3px solid white;
+    margin: 40px;
+}
+.main .galleryContent .box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.main .galleryContent .box img{
+    display: flex;
+    height: 290px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    opacity: 0.6;
+    transition: .5s;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+
+}
+.main .galleryContent .box img:hover{
+    opacity: 1;
+    height: 300px;
+    cursor: pointer;
+    border: 2px solid var(--color_font);
+}
+
+/*
+Footer
+*/
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 200px;
+    display: flex;
+    min-height: 150px;
+    opacity: 0.3;
+    width: 90%;
+    background-color: #252525;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer p{
+    color: var(--color_font);
+    font-family: var(--font_default);
+}
+
+
+@media (max-width: 880px) {
+    header .container .socials p{
+        display: none;
+    }
+    header .container .logo{
+        padding-left: 10px;
+    }
+    header .container .logo h2{
+        font-size: 14px;
+    }
+    header .container .logo p{
+        font-size: 9px;
+    }
+    header .container .logo .moonIcon{
+        width: 24;
+        height: 24;
+    }
+    .main .viewCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .viewCards .card:not(:first-child){
+        margin-top: 40px;
+    }
+}
